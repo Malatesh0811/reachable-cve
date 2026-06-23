@@ -1,0 +1,57 @@
+name: security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  reachable-cve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: Run reachable-cve scan
+        id: scan
+        run: |
+          reachable-cve scan . --format json > rcve-report.json || EXIT=$?
+          echo "exit_code=${EXIT:-0}" >> $GITHUB_OUTPUT
+          jq '.decision, .severity_counts' rcve-report.json
+
+      - name: Upload JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reachable-cve-report
+          path: rcve-report.json
+
+      - name: Post PR comment
+        if: github.event_name == 'pull_request' && always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          reachable-cve scan . --format markdown > rcve-report.md || true
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --body-file rcve-report.md || true
+
+      - name: Fail on BLOCK
+        if: steps.scan.outputs.exit_code == '2'
+        run: |
+          echo "::error::reachable-cve decision = BLOCK"
+          exit 1

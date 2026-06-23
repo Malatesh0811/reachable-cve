@@ -1,0 +1,24 @@
+{
+  "id": "GHSA-8q59-q68h-6hv4",
+  "aliases": ["CVE-2020-14343"],
+  "summary": "PyYAML insecure deserialization via yaml.load",
+  "details": "A vulnerability was discovered in the PyYAML library...",
+  "severity": [
+    {"type": "CVSS_V3", "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"}
+  ],
+  "affected": [
+    {
+      "package": {"ecosystem": "PyPI", "name": "pyyaml"},
+      "ranges": [
+        {"type": "ECOSYSTEM", "events": [{"introduced": "0"}, {"fixed": "5.4"}]}
+      ]
+    }
+  ],
+  "database_specific": {
+    "cvss": {
+      "score": 9.8,
+      "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    },
+    "severity": "CRITICAL"
+  }
+}

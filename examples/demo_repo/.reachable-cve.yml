@@ -1,0 +1,4 @@
+# Optional per-repo overrides for vulnerable-symbol mapping.
+# symbol_map:
+#   somepackage:
+#     - somepackage.dangerous_function

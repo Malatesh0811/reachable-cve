@@ -1,0 +1,7 @@
+{
+  "id": "PYSEC-2022-11111",
+  "aliases": ["CVE-2022-11111"],
+  "summary": "synthetic fixture: only textual severity label, no vector",
+  "affected": [{"package": {"ecosystem": "PyPI", "name": "fake2"}, "ranges": []}],
+  "database_specific": {"severity": "HIGH"}
+}

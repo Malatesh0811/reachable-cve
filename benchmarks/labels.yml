@@ -1,0 +1,34 @@
+# Ground-truth labels for benchmark targets.
+#
+# Each entry pairs an OSV ID with a human verdict on whether that vulnerability
+# is *actually* reachable from any entrypoint in the target repo. Hand-labeled
+# by reading the code. Used by run.py to compute precision/recall/F1 so every
+# scanner change is measurable against a fixed dataset.
+
+targets:
+  demo_vulnerable:
+    path: ../examples/demo_repo
+    notes: "Demo repo that calls yaml.load; should flag CVE-2020-14343 reachable."
+    ground_truth:
+      CVE-2020-14343:
+        reachable_truth: true
+        rationale: "app/config.py:6 calls yaml.load(f) via load_config(), called from main()"
+      CVE-2023-32681:
+        reachable_truth: false
+        rationale: "requests.get only appears in _never_called_fetch which has no incoming call"
+      CVE-2019-10906:
+        reachable_truth: false
+        rationale: "jinja2.Template only in _never_called_render"
+
+  pygoat:
+    path: ./_external/pygoat
+    repo_url: https://github.com/adeyosemanputra/pygoat
+    notes: "Intentionally vulnerable Django app. Clone into ./_external/pygoat before running."
+    ground_truth:
+      # Populate after first labeling pass. Example seed:
+      CVE-2022-22965: { reachable_truth: false, rationale: "Spring4Shell, Django app — Java-only CVE in deps" }
+
+  clean_baseline:
+    path: ../examples/demo_repo_clean
+    notes: "Synthetic clean baseline. No reachable findings expected."
+    ground_truth: {}

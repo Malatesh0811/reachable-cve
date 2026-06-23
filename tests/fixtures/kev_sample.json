@@ -1,0 +1,10 @@
+{
+  "title": "CISA Catalog of Known Exploited Vulnerabilities (test fixture)",
+  "catalogVersion": "test-2026.06",
+  "count": 3,
+  "vulnerabilities": [
+    {"cveID": "CVE-2021-44228", "vendorProject": "Apache",  "product": "Log4j2"},
+    {"cveID": "CVE-2020-14343", "vendorProject": "PyYAML",  "product": "PyYAML"},
+    {"cveID": "CVE-2022-22965", "vendorProject": "VMware",  "product": "Spring Framework"}
+  ]
+}

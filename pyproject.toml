@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reachable-cve"
+version = "0.2.0"
+description = "Reachability-aware vulnerability scanner. Combines static call-graph reachability with EPSS and CISA KEV to cut Snyk/Dependabot noise by ~80%."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "adi", email = "adinarayan.is23@bmsce.ac.in" }]
+keywords = ["security", "sca", "vulnerability", "reachability", "static-analysis", "devsecops", "cve", "epss", "kev"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "tree-sitter>=0.21,<0.22",
+    "tree-sitter-languages>=1.10",
+    "networkx>=3.2",
+    "httpx>=0.27",
+    "click>=8.1",
+    "rich>=13.7",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "packaging>=24.0",
+    "pygithub>=2.3",
+    "cvss>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "build>=1.0", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/adi-bmsce/reachable-cve"
+Repository = "https://github.com/adi-bmsce/reachable-cve"
+Issues = "https://github.com/adi-bmsce/reachable-cve/issues"
+
+[project.scripts]
+reachable-cve = "reachable_cve.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+reachable_cve = ["symbol_map.yml", "taint_rules.yml"]

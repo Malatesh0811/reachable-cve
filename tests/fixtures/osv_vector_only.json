@@ -1,0 +1,14 @@
+{
+  "id": "PYSEC-2021-99999",
+  "aliases": ["CVE-2021-99999"],
+  "summary": "synthetic fixture: severity vector but no database_specific.cvss",
+  "severity": [
+    {"type": "CVSS_V3", "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"}
+  ],
+  "affected": [
+    {
+      "package": {"ecosystem": "PyPI", "name": "fake"},
+      "ranges": [{"type": "ECOSYSTEM", "events": [{"introduced": "0"}, {"fixed": "2.0"}]}]
+    }
+  ]
+}

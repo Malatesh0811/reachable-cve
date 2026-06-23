@@ -1,0 +1,20 @@
+{
+  "id": "GHSA-j8r2-6x86-q33q",
+  "aliases": ["CVE-2023-32681"],
+  "summary": "requests proxy auth credentials leak",
+  "severity": [
+    {"type": "CVSS_V3", "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"}
+  ],
+  "affected": [
+    {
+      "package": {"ecosystem": "PyPI", "name": "requests"},
+      "ranges": [
+        {"type": "ECOSYSTEM", "events": [{"introduced": "0"}, {"fixed": "2.31.0"}]}
+      ]
+    }
+  ],
+  "database_specific": {
+    "cvss": {"score": 6.1, "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"},
+    "severity": "MODERATE"
+  }
+}

@@ -1,0 +1,51 @@
+# Vendored vulnerable-symbol map. PRs welcome — add entries below.
+# Each key is a lowercased PyPI package name; the value is a list of fully-
+# qualified symbol names that, if reachable in the user's code, indicate that
+# a CVE in that package can be triggered.
+#
+# Rules of thumb:
+#   - Prefer the *narrowest* sink. `yaml.load` is right; just `yaml` is too broad.
+#   - For class methods, use the full path: `mako.template.Template.render`.
+#   - If the CVE applies to every entry-point in the package, use the package
+#     name itself (e.g. `py.path` matches any access to `py.path.*`).
+
+symbol_map:
+  pyyaml:
+    - yaml.load
+    - yaml.load_all
+  yaml:
+    - yaml.load
+    - yaml.load_all
+  mako:
+    - mako.template.Template.render
+  requests:
+    - requests.get
+    - requests.post
+    - requests.put
+    - requests.delete
+    - requests.request
+    - requests.Session.send
+  py:
+    - py.path
+  pydantic:
+    - pydantic.BaseModel
+  urllib3:
+    - urllib3.request
+    - urllib3.PoolManager.request
+  gunicorn:
+    - gunicorn.app.wsgiapp.run
+  jinja2:
+    - jinja2.Template.render
+    - jinja2.Environment.from_string
+  pillow:
+    - PIL.Image.open
+  cryptography:
+    - cryptography.hazmat.primitives.ciphers.Cipher
+  lxml:
+    - lxml.etree.parse
+    - lxml.etree.fromstring
+  pickle:
+    - pickle.loads
+    - pickle.load
+  paramiko:
+    - paramiko.SSHClient.connect

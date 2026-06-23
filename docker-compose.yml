@@ -1,0 +1,24 @@
+services:
+  webhook:
+    build: .
+    image: reachable-cve:latest
+    ports:
+      - "8080:8080"
+    environment:
+      GITHUB_APP_ID: ${GITHUB_APP_ID:?set GITHUB_APP_ID in .env}
+      GITHUB_WEBHOOK_SECRET: ${GITHUB_WEBHOOK_SECRET:?set GITHUB_WEBHOOK_SECRET in .env}
+      GITHUB_APP_PRIVATE_KEY_PATH: /secrets/private-key.pem
+      RCVE_LOG_LEVEL: ${RCVE_LOG_LEVEL:-INFO}
+      RCVE_LOG_JSON: ${RCVE_LOG_JSON:-1}
+    volumes:
+      - ./private-key.pem:/secrets/private-key.pem:ro
+      - rcve-cache:/home/rcve/.cache/reachable-cve
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  rcve-cache:

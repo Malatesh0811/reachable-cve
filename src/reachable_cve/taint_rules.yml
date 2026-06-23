@@ -1,0 +1,25 @@
+# Argument-aware taint rules (Tier 2).
+#
+# When reachability finds a sink, the matcher consults this file. If a rule
+# exists for the CVE, the finding is only flagged reachable if its requirements
+# are satisfied at the call site.
+#
+# Today we support `requires_kwarg_present` — the sink call must pass these
+# keyword arguments. We do NOT yet evaluate kwarg *values* (that needs full
+# dataflow). A missing rule means "any call counts" — the conservative default.
+#
+# Format:
+#   <CVE-ID>:
+#     description: short human note
+#     requires_kwarg_present: [list of kwarg names]
+
+CVE-2023-32681:
+  description: "requests proxy auth credentials leak — only when 'proxies' kwarg is set"
+  requires_kwarg_present: ["proxies"]
+
+CVE-2020-14343:
+  description: "PyYAML insecure deserialization via yaml.load — any call to default Loader"
+  # No requirements; any reachable call is flagged.
+
+CVE-2022-40023:
+  description: "Mako template injection — exploitable on any render with user input"
