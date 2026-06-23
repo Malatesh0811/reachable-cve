@@ -111,25 +111,36 @@ docs/screenshots/fastapi-route.png             # @router.post entrypoint
 docs/screenshots/github-actions.png            # CI gate blocking a PR
 ```
 
-## How this compares to Dependabot / pip-audit / Snyk
+## How this compares to Dependabot, pip-audit, and Snyk
 
-| Capability | Dependabot | pip-audit | Snyk (free tier) | **reachable-cve** |
+This table is restricted to claims that are independently verifiable from public documentation or source code. Where a competitor's behavior depends on proprietary tiering or implementation details, the cell reads "Unknown / proprietary."
+
+| Capability | Dependabot | pip-audit | Snyk OSS | **reachable-cve** |
 |---|---|---|---|---|
-| OSV / GHSA dependency scan | ✓ (GHSA) | ✓ | ✓ | ✓ |
-| EPSS exploit-probability scoring | ✗ | ✗ | Partial (UI only) | ✓ (gates on it) |
-| CISA KEV catalog integration | ✗ | ✗ | Partial (UI only) | ✓ (gates on it) |
-| Static call-graph reachability | ✗ | ✗ | ✗ (paid: Snyk Reach) | ✓ |
-| Argument-aware sink suppression | ✗ | ✗ | ✗ (paid: Snyk Reach) | Partial (kwarg-presence only) |
-| Class-aware `self.x` resolution | ✗ | ✗ | ✗ (paid: Snyk Reach) | ✓ |
-| Framework decorator entrypoint detection | ✗ | ✗ | ✗ (paid: Snyk Reach) | ✓ (Flask / FastAPI / Celery / Lambda; **Django pending**) |
-| Sticky comment on *your* PRs | ✗ (opens its own PRs instead) | ✗ | ✓ | ✓ |
-| GitHub check-run gating | ✗ | ✗ | ✓ | ✓ |
-| Tunable severity threshold | Partial | Partial (`--strict`) | ✓ | ✓ |
-| Open source | ✓ MIT (dependabot-core) | ✓ Apache-2 | ✗ proprietary | ✓ MIT |
-| Real-world precision/recall numbers | Public benchmarks | Public benchmarks | Public benchmarks | **Not yet measured** |
-| Cost for private repos at team scale | Free | Free | ~$40-52/dev/month (Team) | Free |
+| Scanner license | MIT (dependabot-core)¹ | Apache-2.0 | Proprietary | **MIT** |
+| Full scanner source publicly inspectable | Partial¹ | ✓ | ✗ | **✓** |
+| Self-hostable scanner (no vendor account required) | ✗² | ✓ (CLI) | ✓ (CLI) | **✓** (CLI / Docker / GitHub App) |
+| Vulnerability data source | GitHub Advisory DB | OSV (api.osv.dev) | Snyk Vulnerability DB | OSV (api.osv.dev) |
+| Reads Python dependency manifests | ✓ | ✓ | ✓ | ✓ |
+| Parses application source code | ✗ (manifest-only)³ | ✗ (manifest-only)³ | Unknown / proprietary | **✓** (tree-sitter Python AST) |
+| Reachability analysis between entrypoints and vulnerable functions, with publicly inspectable implementation | ✗³ | ✗³ | Unknown / proprietary⁴ | **✓** (open algorithm) |
+| EPSS documented as a gating signal in the published interface | Not documented⁵ | ✗ | Unknown / proprietary⁴ | **✓** |
+| CISA KEV documented as a gating signal in the published interface | Not documented⁵ | ✗ | Unknown / proprietary⁴ | **✓** |
+| Framework-decorator entrypoint detection with documented framework list | ✗³ | ✗³ | Unknown / proprietary⁴ | **✓** (Flask, FastAPI, Celery, AWS Lambda; Django pending) |
+| Argument-aware filtering of sink calls | ✗ | ✗ | Unknown / proprietary⁴ | **Partial** (kwarg-presence only; no value-flow taint) |
+| Documented CI exit-code policy with tunable thresholds | Partial (security-update auto-merge rules) | Partial (`--strict` for any finding) | Configurable severity threshold (per docs.snyk.io) | **✓** (BLOCK / WARN / PASS via `--block-score` / `--warn-score`) |
 
-The closest commercial product targeting the same gap is **Endor Labs**, which offers reachability for Java/Python/JS plus argument-sensitive taint via full dataflow analysis. `reachable-cve` is not feature-parity: Python only, kwarg-presence rather than full taint, hand-curated symbol map. The differentiator is that this surface area is available as MIT-licensed OSS at all.
+**Footnotes**
+
+¹ The `dependabot-core` library is MIT-licensed and inspectable. The Dependabot service that runs on github.com is operated by GitHub and is not user-installable as a whole; the orchestration layer is GitHub-internal.
+
+² Dependabot is delivered exclusively as a GitHub-hosted service. It cannot be installed and run inside a customer's own environment.
+
+³ Dependabot and pip-audit are documented as manifest-based scanners: they consume `requirements.txt`, `pyproject.toml`, and lockfiles, and report on the declared dependency versions. They do not parse application source code to determine which symbols are actually called.
+
+⁴ Snyk publishes commercial product lines (Snyk Code, Snyk Reach, etc.) that include code-aware analysis. The exact features available at the free / Open Source tier, the specific algorithms used, and the gating signals applied are proprietary and may change. We do not speculate.
+
+⁵ Dependabot's public alert schema does not list EPSS or CISA KEV as fields used for filtering, gating, or auto-triage. GitHub's Security Advisories UI surfaces some exploit-prediction signals separately; whether Dependabot itself consumes them as gating input is not documented.
 
 ## Architecture
 
