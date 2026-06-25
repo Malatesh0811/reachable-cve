@@ -49,3 +49,23 @@ symbol_map:
     - pickle.load
   paramiko:
     - paramiko.SSHClient.connect
+
+  # Django — specific high-impact symbols. The fallback ["django"] would prefix-match
+  # framework bootstrap (django.core.asgi.get_asgi_application) and produce 82 phantom
+  # findings on a real project; see benchmarks/PYGOAT_REPORT.md. Curated list:
+  django:
+    - django.template.Template.render            # SSTI / template injection
+    - django.template.engine.Engine.from_string
+    - django.utils.safestring.mark_safe          # XSS escape hatch
+    - django.utils.html.format_html
+    - django.db.models.expressions.RawSQL        # SQL injection
+    - django.db.connection.cursor
+    - django.shortcuts.render
+    - django.shortcuts.redirect                  # open redirect
+    - django.http.FileResponse                   # path traversal
+    - django.http.HttpResponseRedirect
+    - django.core.files.uploadedfile.UploadedFile
+
+  djangorestframework:
+    - rest_framework.serializers.Serializer.is_valid
+    - rest_framework.parsers.JSONParser.parse

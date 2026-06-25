@@ -51,6 +51,7 @@ def _resolve_callee(
     class_attr_table: dict[tuple[str, str], str] | None = None,
     enclosing: str | None = None,
     getattr_table: dict[tuple[str, str], str] | None = None,
+    local_var_table: dict[tuple[str, str], str] | None = None,
 ) -> list[str]:
     """Resolve a textual callee expression to one or more qualnames."""
     expr = expr.strip()
@@ -60,6 +61,19 @@ def _resolve_callee(
     parts = expr.split(".")
     head = parts[0]
     tail = parts[1:]
+
+    # Local-var class binding: t = Template(...); t.render(...) -> Template.render(...)
+    # We rewrite the expression to start with the bound class name, then recurse.
+    # Falls back silently if the variable isn't tracked.
+    if tail and local_var_table and enclosing:
+        bound = local_var_table.get((enclosing, head))
+        if bound is not None:
+            return _resolve_callee(
+                bound + "." + ".".join(tail),
+                aliases, local_funcs, module,
+                class_attr_table=class_attr_table, enclosing=enclosing,
+                getattr_table=getattr_table, local_var_table=local_var_table,
+            )
 
     # Class instantiation chain: "<LocalClass>().method[...]" -> "<module>.<LocalClass>.method[...]"
     # tree-sitter emits the literal text of the function expression, so a call
@@ -136,6 +150,15 @@ def _build_class_attr_table(modules: list[ParsedModule]) -> dict[tuple[str, str]
     return table
 
 
+def _build_local_var_table(modules: list[ParsedModule]) -> dict[tuple[str, str], str]:
+    """(scope_qualname, local_name) -> class_name from `name = Class(...)` assignments."""
+    table: dict[tuple[str, str], str] = {}
+    for m in modules:
+        for lv in m.local_var_assigns:
+            table[(lv.scope_qualname, lv.local_name)] = lv.callee_name
+    return table
+
+
 def _build_getattr_table(modules: list[ParsedModule]) -> dict[tuple[str, str], str]:
     """(module_name, local_name) -> 'base.attr'
 
@@ -167,6 +190,7 @@ def build(modules: list[ParsedModule]) -> CallGraph:
 
     class_attr_table = _build_class_attr_table(modules)
     getattr_table = _build_getattr_table(modules)
+    local_var_table = _build_local_var_table(modules)
 
     for m in modules:
         aliases = _alias_table(m.imports)
@@ -187,7 +211,7 @@ def build(modules: list[ParsedModule]) -> CallGraph:
             targets = _resolve_callee(
                 call.callee_expr, aliases, local_funcs, m.module,
                 class_attr_table=class_attr_table, enclosing=call.caller_qualname,
-                getattr_table=getattr_table,
+                getattr_table=getattr_table, local_var_table=local_var_table,
             )
             for t in targets:
                 g.add_edge(call.caller_qualname, t, line=call.line, file=str(m.path),
@@ -204,4 +228,16 @@ def build(modules: list[ParsedModule]) -> CallGraph:
 
 
 def build_from_repo(root: Path) -> CallGraph:
-    return build(parse_repo(root))
+    cg = build(parse_repo(root))
+    # Django adapter: every routed view becomes an additional entrypoint.
+    # We add the qualnames regardless of whether the function actually exists in
+    # the graph — BFS just won't traverse from a missing node. This means a
+    # urls.py that points at a third-party view (e.g. `admin.site.urls`) doesn't
+    # blow up; it just contributes no edges.
+    try:
+        from .django_routes import discover_entrypoints as _discover_django
+        cg.entrypoints.update(_discover_django(root))
+    except Exception:
+        # Tree-sitter parse failures inside urls.py shouldn't crash the whole scan
+        pass
+    return cg

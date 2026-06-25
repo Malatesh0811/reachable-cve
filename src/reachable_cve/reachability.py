@@ -24,10 +24,41 @@ class ReachabilityResult:
     taint_reason: str | None = None  # populated when taint rules are consulted
 
 
+# Framework bootstrap symbols — calling these is unavoidable in any Flask/FastAPI/
+# Django project and they are not themselves vulnerability sinks. If a fallback
+# (package-name) symbol-map entry would otherwise prefix-match one of these, we
+# suppress the match to avoid the headline FP we hit on PyGoat
+# (`pygoat.asgi.<module>` -> `ext:django.core.asgi.get_asgi_application` x 82).
+BOOTSTRAP_EXCLUSIONS: set[str] = {
+    # Django
+    "django.core.asgi.get_asgi_application",
+    "django.core.wsgi.get_wsgi_application",
+    "django.core.management.execute_from_command_line",
+    "django.urls.path",
+    "django.urls.re_path",
+    "django.urls.include",
+    "django.urls.URLResolver",
+    "django.conf.urls.url",
+    "django.conf.settings",
+    "django.setup",
+    # FastAPI / Starlette
+    "fastapi.FastAPI",
+    "fastapi.APIRouter",
+    "starlette.applications.Starlette",
+    # Flask
+    "flask.Flask",
+    "flask.Blueprint",
+    # Celery
+    "celery.Celery",
+}
+
+
 def _match(node: str, symbols: list[str]) -> str | None:
     if not node.startswith("ext:"):
         return None
     bare = node[4:]
+    if bare in BOOTSTRAP_EXCLUSIONS:
+        return None
     for s in symbols:
         if bare == s or bare.startswith(s + "."):
             return s

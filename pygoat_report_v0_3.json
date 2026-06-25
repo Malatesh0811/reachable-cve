@@ -1,0 +1,3824 @@
+{
+  "decision": {
+    "verdict": "BLOCK",
+    "reason": "1 reachable finding(s) at score >= 60.0 (top: GHSA-j7hp-h8jx-5ppr @ 96.3)"
+  },
+  "severity_counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 7,
+    "low": 92,
+    "informational": 67
+  },
+  "findings": [
+    {
+      "osv_id": "GHSA-j7hp-h8jx-5ppr",
+      "cve_ids": [
+        "CVE-2023-4863",
+        "CVE-2023-5129"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 8.8,
+      "epss": 0.99739,
+      "in_kev": true,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 96.3,
+      "severity": "critical",
+      "fixed_versions": [
+        "0.0.0-20250406010349-76805d5a8860",
+        "0.1.8",
+        "0.2.6",
+        "0.9.3",
+        "1.1.2-0.20250406010349-76805d5a8860",
+        "1.4.0",
+        "10.0.1",
+        "13.3.0",
+        "2.88.6",
+        "22.3.24",
+        "24.8.3",
+        "25.8.1",
+        "26.2.1",
+        "27.0.0-beta.2"
+      ],
+      "remediation": "upgrade pillow to >= 0.0.0-20250406010349-76805d5a8860"
+    },
+    {
+      "osv_id": "GHSA-qmf9-6jqf-j8fq",
+      "cve_ids": [
+        "CVE-2023-46695"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.49774,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 37.4,
+      "severity": "medium",
+      "fixed_versions": [
+        "3.2.23",
+        "4.1.13",
+        "4.2.7"
+      ],
+      "remediation": "upgrade django to >= 3.2.23"
+    },
+    {
+      "osv_id": "GHSA-frmv-pr5f-9mcr",
+      "cve_ids": [
+        "CVE-2025-64459"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.1,
+      "epss": 0.1914,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 33.0,
+      "severity": "medium",
+      "fixed_versions": [
+        "4.2.26",
+        "5.1.14",
+        "5.2.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.26"
+    },
+    {
+      "osv_id": "PYSEC-2025-108",
+      "cve_ids": [
+        "CVE-2025-64459"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.1,
+      "epss": 0.1914,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 33.0,
+      "severity": "medium",
+      "fixed_versions": [
+        "4.2.26",
+        "5.1.14",
+        "5.2.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.26"
+    },
+    {
+      "osv_id": "GHSA-f6f8-9mx6-9mx2",
+      "cve_ids": [
+        "CVE-2024-39614"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.30129,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 31.5,
+      "severity": "medium",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "GHSA-8q59-q68h-6hv4",
+      "cve_ids": [
+        "CVE-2020-14343"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": 9.8,
+      "epss": 0.05984,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 31.2,
+      "severity": "medium",
+      "fixed_versions": [
+        "5.4"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.4"
+    },
+    {
+      "osv_id": "GHSA-6757-jp84-gxfx",
+      "cve_ids": [
+        "CVE-2020-1747"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": 9.8,
+      "epss": 0.05299,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 31.0,
+      "severity": "medium",
+      "fixed_versions": [
+        "5.3.1"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.3.1"
+    },
+    {
+      "osv_id": "GHSA-3pqx-4fqf-j49f",
+      "cve_ids": [
+        "CVE-2019-20477"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": 9.8,
+      "epss": 0.05031,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 30.9,
+      "severity": "medium",
+      "fixed_versions": [
+        "5.2"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.2"
+    },
+    {
+      "osv_id": "GHSA-m9g8-fxxm-xg86",
+      "cve_ids": [
+        "CVE-2024-53908"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.8,
+      "epss": 0.01396,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 29.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.17",
+        "5.0.10",
+        "5.1.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.17"
+    },
+    {
+      "osv_id": "GHSA-r3xc-prgr-mg9p",
+      "cve_ids": [
+        "CVE-2023-31047"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.8,
+      "epss": 0.0138,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 29.8,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.19",
+        "4.1.9",
+        "4.2.1"
+      ],
+      "remediation": "upgrade django to >= 3.2.19"
+    },
+    {
+      "osv_id": "PYSEC-2025-106",
+      "cve_ids": [
+        "CVE-2025-59681"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.8,
+      "epss": 0.00592,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 29.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.25",
+        "5.1.13",
+        "5.2.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.25"
+    },
+    {
+      "osv_id": "PYSEC-2026-52",
+      "cve_ids": [
+        "CVE-2026-4277"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.8,
+      "epss": 0.00458,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 29.5,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2025-105",
+      "cve_ids": [
+        "CVE-2025-57833"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 8.1,
+      "epss": 0.15602,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 29.0,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.24",
+        "5.1.12",
+        "5.2.6"
+      ],
+      "remediation": "upgrade django to >= 4.2.24"
+    },
+    {
+      "osv_id": "GHSA-pv4p-cwwg-4rph",
+      "cve_ids": [
+        "CVE-2024-42005"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 9.1,
+      "epss": 0.01227,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 27.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "GHSA-6w2r-r2m5-xq5w",
+      "cve_ids": [
+        "CVE-2025-57833"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.1,
+      "epss": 0.15602,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 26.0,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.24",
+        "5.1.12",
+        "5.2.6"
+      ],
+      "remediation": "upgrade django to >= 4.2.24"
+    },
+    {
+      "osv_id": "GHSA-3f63-hfp8-52jq",
+      "cve_ids": [
+        "CVE-2023-50447"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 8.1,
+      "epss": 0.01703,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 24.8,
+      "severity": "low",
+      "fixed_versions": [
+        "10.2.0"
+      ],
+      "remediation": "upgrade pillow to >= 10.2.0"
+    },
+    {
+      "osv_id": "GHSA-mwm9-4648-f68q",
+      "cve_ids": [
+        "CVE-2026-1207"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.03779,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-5hgc-2vfp-mqvc",
+      "cve_ids": [
+        "CVE-2024-45230"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.25327,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.5,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.16",
+        "5.0.9",
+        "5.1.1"
+      ],
+      "remediation": "upgrade django to >= 4.2.16"
+    },
+    {
+      "osv_id": "GHSA-jh3w-4vvf-mjgr",
+      "cve_ids": [
+        "CVE-2023-36053"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.02669,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.3,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.20",
+        "4.1.10",
+        "4.2.3"
+      ],
+      "remediation": "upgrade django to >= 3.2.20"
+    },
+    {
+      "osv_id": "GHSA-qw25-v68c-qjf3",
+      "cve_ids": [
+        "CVE-2025-64458"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.01903,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.26",
+        "5.1.14",
+        "5.2.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.26"
+    },
+    {
+      "osv_id": "PYSEC-2025-107",
+      "cve_ids": [
+        "CVE-2025-64458"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.01903,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.26",
+        "5.1.14",
+        "5.2.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.26"
+    },
+    {
+      "osv_id": "PYSEC-2025-109",
+      "cve_ids": [
+        "CVE-2025-64460"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.02106,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 23.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.27",
+        "5.1.15",
+        "5.2.9"
+      ],
+      "remediation": "upgrade django to >= 4.2.27"
+    },
+    {
+      "osv_id": "GHSA-8498-2h75-472j",
+      "cve_ids": [
+        "CVE-2024-53907"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.0137,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.9,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.17",
+        "5.0.10",
+        "5.1.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.17"
+    },
+    {
+      "osv_id": "GHSA-qg2p-9jwr-mmqf",
+      "cve_ids": [
+        "CVE-2024-38875"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.01187,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.9,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "GHSA-9jmf-237g-qf46",
+      "cve_ids": [
+        "CVE-2024-39330"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.01008,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "PYSEC-2026-43",
+      "cve_ids": [
+        "CVE-2025-14550"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00993,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "PYSEC-2026-45",
+      "cve_ids": [
+        "CVE-2026-1285"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00993,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-8ghj-p4vj-mr35",
+      "cve_ids": [
+        "CVE-2023-44271"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 7.5,
+      "epss": 0.01038,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 22.8,
+      "severity": "low",
+      "fixed_versions": [
+        "10.0.0"
+      ],
+      "remediation": "upgrade pillow to >= 10.0.0"
+    },
+    {
+      "osv_id": "GHSA-8p8v-wh79-9r56",
+      "cve_ids": [
+        "CVE-2026-25673"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00676,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.29",
+        "5.2.12",
+        "6.0.3"
+      ],
+      "remediation": "upgrade django to >= 4.2.29"
+    },
+    {
+      "osv_id": "GHSA-933h-hp56-hf7m",
+      "cve_ids": [
+        "CVE-2026-33034"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00769,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2026-49",
+      "cve_ids": [
+        "CVE-2026-33034"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00769,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "GHSA-gvg8-93h5-g6qq",
+      "cve_ids": [
+        "CVE-2026-1287"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00491,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-mvfq-ggxm-9mc5",
+      "cve_ids": [
+        "CVE-2026-3902"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00436,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2026-51",
+      "cve_ids": [
+        "CVE-2026-3902"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.5,
+      "epss": 0.00436,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 22.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "GHSA-hpr9-3m2g-3j9p",
+      "cve_ids": [
+        "CVE-2025-59681"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 7.1,
+      "epss": 0.00592,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 21.5,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.25",
+        "5.1.13",
+        "5.2.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.25"
+    },
+    {
+      "osv_id": "GHSA-44wm-f244-xhp3",
+      "cve_ids": [
+        "CVE-2024-28219"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 6.7,
+      "epss": 0.00989,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 20.4,
+      "severity": "low",
+      "fixed_versions": [
+        "10.3.0"
+      ],
+      "remediation": "upgrade pillow to >= 10.3.0"
+    },
+    {
+      "osv_id": "GHSA-8j24-cjrq-gr2m",
+      "cve_ids": [
+        "CVE-2025-32873"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.13969,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 20.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.21",
+        "5.1.9",
+        "5.2.1"
+      ],
+      "remediation": "upgrade django to >= 4.2.21"
+    },
+    {
+      "osv_id": "GHSA-5mf9-h53q-7mhq",
+      "cve_ids": [
+        "CVE-2026-33033"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 6.5,
+      "epss": 0.00689,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 19.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2026-48",
+      "cve_ids": [
+        "CVE-2026-33033"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 6.5,
+      "epss": 0.00689,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 19.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "GHSA-xxj9-f6rv-m3x4",
+      "cve_ids": [
+        "CVE-2024-24680"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.9,
+      "epss": 0.01606,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 18.2,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.24",
+        "4.2.10",
+        "5.0.2"
+      ],
+      "remediation": "upgrade django to >= 3.2.24"
+    },
+    {
+      "osv_id": "GHSA-h8gc-pgj2-vjm3",
+      "cve_ids": [
+        "CVE-2023-43665"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.9,
+      "epss": 0.01236,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 18.1,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.22",
+        "4.1.12",
+        "4.2.6"
+      ],
+      "remediation": "upgrade django to >= 3.2.22"
+    },
+    {
+      "osv_id": "GHSA-qcgg-j2x8-h9g8",
+      "cve_ids": [
+        "CVE-2024-56374"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.8,
+      "epss": 0.01854,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 18.0,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.18",
+        "5.0.11",
+        "5.1.5"
+      ],
+      "remediation": "upgrade django to >= 4.2.18"
+    },
+    {
+      "osv_id": "PYSEC-2026-44",
+      "cve_ids": [
+        "CVE-2026-1207"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.4,
+      "epss": 0.03779,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 17.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-vrcr-9hj9-jcg6",
+      "cve_ids": [
+        "CVE-2025-64460"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.5,
+      "epss": 0.02106,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 17.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.27",
+        "5.1.15",
+        "5.2.9"
+      ],
+      "remediation": "upgrade django to >= 4.2.27"
+    },
+    {
+      "osv_id": "GHSA-9wx4-h78v-vm56",
+      "cve_ids": [
+        "CVE-2024-35195"
+      ],
+      "package": "requests",
+      "installed_version": "2.28.2",
+      "cvss": 5.6,
+      "epss": 0.0034,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "requests.get",
+      "path": [
+        "introduction.views.ssrf_lab2",
+        "ext:requests.get"
+      ],
+      "score": 16.9,
+      "severity": "low",
+      "fixed_versions": [
+        "2.32.0"
+      ],
+      "remediation": "upgrade requests to >= 2.32.0"
+    },
+    {
+      "osv_id": "GHSA-vm8q-m57g-pff3",
+      "cve_ids": [
+        "CVE-2024-27351"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.01854,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.5,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.25",
+        "4.2.11",
+        "5.0.3"
+      ],
+      "remediation": "upgrade django to >= 3.2.25"
+    },
+    {
+      "osv_id": "GHSA-r73j-pqj5-w3x7",
+      "cve_ids": [
+        "CVE-2026-42310"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 5.5,
+      "epss": 0.00126,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 16.5,
+      "severity": "low",
+      "fixed_versions": [
+        "12.2.0"
+      ],
+      "remediation": "upgrade pillow to >= 12.2.0"
+    },
+    {
+      "osv_id": "GHSA-wjx4-4jcj-g98j",
+      "cve_ids": [
+        "CVE-2026-42308"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 5.5,
+      "epss": 0.00114,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 16.5,
+      "severity": "low",
+      "fixed_versions": [
+        "12.2.0"
+      ],
+      "remediation": "upgrade pillow to >= 12.2.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-165",
+      "cve_ids": [
+        "CVE-2026-42308"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": 5.5,
+      "epss": 0.00114,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 16.5,
+      "severity": "low",
+      "fixed_versions": [
+        "12.2.0"
+      ],
+      "remediation": "upgrade pillow to >= 12.2.0"
+    },
+    {
+      "osv_id": "GHSA-6426-9fv3-65x8",
+      "cve_ids": [
+        "CVE-2026-1312"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.4,
+      "epss": 0.00491,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-795c-9xpc-xw6g",
+      "cve_ids": [
+        "CVE-2024-41990"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.01258,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "GHSA-7h4p-27mh-hmrw",
+      "cve_ids": [
+        "CVE-2023-41164"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.01284,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.21",
+        "4.1.11",
+        "4.2.5"
+      ],
+      "remediation": "upgrade django to >= 3.2.21"
+    },
+    {
+      "osv_id": "GHSA-jh75-99hh-qvx9",
+      "cve_ids": [
+        "CVE-2024-41989"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.012,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "PYSEC-2026-46",
+      "cve_ids": [
+        "CVE-2026-1287"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.4,
+      "epss": 0.00491,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "PYSEC-2026-47",
+      "cve_ids": [
+        "CVE-2026-1312"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.4,
+      "epss": 0.00491,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-r836-hh6v-rg5g",
+      "cve_ids": [
+        "CVE-2024-41991"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.00954,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "GHSA-x7q2-wr7g-xqmf",
+      "cve_ids": [
+        "CVE-2024-39329"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.00889,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "GHSA-9hjg-9r4m-mvj7",
+      "cve_ids": [
+        "CVE-2024-47081"
+      ],
+      "package": "requests",
+      "installed_version": "2.28.2",
+      "cvss": 5.3,
+      "epss": 0.00846,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "requests.get",
+      "path": [
+        "introduction.views.ssrf_lab2",
+        "ext:requests.get"
+      ],
+      "score": 16.2,
+      "severity": "low",
+      "fixed_versions": [
+        "2.32.4"
+      ],
+      "remediation": "upgrade requests to >= 2.32.4"
+    },
+    {
+      "osv_id": "PYSEC-2026-42",
+      "cve_ids": [
+        "CVE-2025-13473"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.3,
+      "epss": 0.00713,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 16.1,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-p3fp-8748-vqfq",
+      "cve_ids": [
+        "CVE-2025-26699"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 5.0,
+      "epss": 0.00748,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 15.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.20",
+        "5.0.13",
+        "5.1.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.20"
+    },
+    {
+      "osv_id": "PYSEC-2023-222",
+      "cve_ids": [
+        "CVE-2023-46695"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.49774,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 14.9,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.23",
+        "4.1.13",
+        "4.2.7"
+      ],
+      "remediation": "upgrade django to >= 3.2.23"
+    },
+    {
+      "osv_id": "GHSA-gc5v-m9x4-r6x2",
+      "cve_ids": [
+        "CVE-2026-25645"
+      ],
+      "package": "requests",
+      "installed_version": "2.28.2",
+      "cvss": 4.4,
+      "epss": 0.00182,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "requests.get",
+      "path": [
+        "introduction.views.ssrf_lab2",
+        "ext:requests.get"
+      ],
+      "score": 13.3,
+      "severity": "low",
+      "fixed_versions": [
+        "2.33.0"
+      ],
+      "remediation": "upgrade requests to >= 2.33.0"
+    },
+    {
+      "osv_id": "GHSA-rqw2-ghq9-44m7",
+      "cve_ids": [
+        "CVE-2025-13372"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 4.3,
+      "epss": 0.0087,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 13.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.27",
+        "5.1.15",
+        "5.2.9"
+      ],
+      "remediation": "upgrade django to >= 4.2.27"
+    },
+    {
+      "osv_id": "PYSEC-2025-104",
+      "cve_ids": [
+        "CVE-2025-13372"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 4.3,
+      "epss": 0.0087,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 13.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.27",
+        "5.1.15",
+        "5.2.9"
+      ],
+      "remediation": "upgrade django to >= 4.2.27"
+    },
+    {
+      "osv_id": "GHSA-7xr5-9hcq-chf9",
+      "cve_ids": [
+        "CVE-2025-48432"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 4.0,
+      "epss": 0.006,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 12.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.22",
+        "5.1.10",
+        "5.2.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.22"
+    },
+    {
+      "osv_id": "GHSA-rrqc-c2jx-6jgv",
+      "cve_ids": [
+        "CVE-2024-45231"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 3.7,
+      "epss": 0.00805,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 11.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.16",
+        "5.0.9",
+        "5.1.1"
+      ],
+      "remediation": "upgrade django to >= 4.2.16"
+    },
+    {
+      "osv_id": "GHSA-mjgh-79qc-68w3",
+      "cve_ids": [
+        "CVE-2026-25674"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 3.7,
+      "epss": 0.00341,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 11.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.29",
+        "5.2.12",
+        "6.0.3"
+      ],
+      "remediation": "upgrade django to >= 4.2.29"
+    },
+    {
+      "osv_id": "GHSA-q95w-c7qg-hrff",
+      "cve_ids": [
+        "CVE-2025-59682"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 3.1,
+      "epss": 0.00863,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 9.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.25",
+        "5.1.13",
+        "5.2.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.25"
+    },
+    {
+      "osv_id": "PYSEC-2024-59",
+      "cve_ids": [
+        "CVE-2024-39614"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.30129,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 9.0,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "GHSA-mmwr-2jhp-mc7j",
+      "cve_ids": [
+        "CVE-2026-4292"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.7,
+      "epss": 0.00294,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 8.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2026-53",
+      "cve_ids": [
+        "CVE-2026-4292"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.7,
+      "epss": 0.00294,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 8.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "GHSA-33mw-q7rj-mjwj",
+      "cve_ids": [
+        "CVE-2025-14550"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.5,
+      "epss": 0.00993,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 7.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-4rrr-2h4v-f3j9",
+      "cve_ids": [
+        "CVE-2026-1285"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.5,
+      "epss": 0.00993,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 7.8,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-2mcm-79hx-8fxw",
+      "cve_ids": [
+        "CVE-2025-13473"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.5,
+      "epss": 0.00713,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 7.7,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.28",
+        "5.2.11",
+        "6.0.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.28"
+    },
+    {
+      "osv_id": "GHSA-pwjp-ccjc-ghwg",
+      "cve_ids": [
+        "CVE-2026-4277"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": 2.5,
+      "epss": 0.00458,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 7.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.30",
+        "5.2.13",
+        "6.0.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.30"
+    },
+    {
+      "osv_id": "PYSEC-2024-102",
+      "cve_ids": [
+        "CVE-2024-45230"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.25327,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 7.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.16",
+        "5.0.9",
+        "5.1.1"
+      ],
+      "remediation": "upgrade django to >= 4.2.16"
+    },
+    {
+      "osv_id": "PYSEC-2025-37",
+      "cve_ids": [
+        "CVE-2025-32873"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.13969,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 4.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.21",
+        "5.1.9",
+        "5.2.1"
+      ],
+      "remediation": "upgrade django to >= 4.2.21"
+    },
+    {
+      "osv_id": "PYSEC-2023-192",
+      "cve_ids": [
+        "CVE-2023-43804"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 8.1,
+      "epss": 0.01207,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.5,
+      "severity": "informational",
+      "fixed_versions": [
+        "01220354d389cd05474713f8c982d05c9b17aafb",
+        "1.26.17",
+        "2.0.6",
+        "644124ecd0b6e417c527191f866daa05a5a2056d"
+      ],
+      "remediation": "upgrade urllib3 to >= 01220354d389cd05474713f8c982d05c9b17aafb"
+    },
+    {
+      "osv_id": "GHSA-2g68-c3qc-8985",
+      "cve_ids": [
+        "CVE-2024-34069"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 7.5,
+      "epss": 0.03397,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.4,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.0.3"
+      ],
+      "remediation": "upgrade werkzeug to >= 3.0.3"
+    },
+    {
+      "osv_id": "GHSA-xqr8-7jwr-rhp7",
+      "cve_ids": [
+        "CVE-2023-37920"
+      ],
+      "package": "certifi",
+      "installed_version": "2022.12.7",
+      "cvss": 7.5,
+      "epss": 0.00472,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2023.7.22"
+      ],
+      "remediation": "upgrade certifi to >= 2023.7.22"
+    },
+    {
+      "osv_id": "PYSEC-2024-230",
+      "cve_ids": [
+        "CVE-2024-39689"
+      ],
+      "package": "certifi",
+      "installed_version": "2022.12.7",
+      "cvss": 7.5,
+      "epss": 0.01049,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2024.7.4",
+        "bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+      ],
+      "remediation": "upgrade certifi to >= 2024.7.4"
+    },
+    {
+      "osv_id": "GHSA-3ww4-gg4f-jr7f",
+      "cve_ids": [
+        "CVE-2023-50782"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": 0.01118,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "42.0.0"
+      ],
+      "remediation": "upgrade cryptography to >= 42.0.0"
+    },
+    {
+      "osv_id": "GHSA-6vqw-3v5j-54x4",
+      "cve_ids": [
+        "CVE-2024-26130"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": 0.00831,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "42.0.4"
+      ],
+      "remediation": "upgrade cryptography to >= 42.0.4"
+    },
+    {
+      "osv_id": "GHSA-r6ph-v2qm-q3c2",
+      "cve_ids": [
+        "CVE-2026-26007"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": 0.00227,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "46.0.5"
+      ],
+      "remediation": "upgrade cryptography to >= 46.0.5"
+    },
+    {
+      "osv_id": "PYSEC-2023-254",
+      "cve_ids": [
+        "CVE-2023-49083"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": 0.00985,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "41.0.6",
+        "f09c261ca10a31fe41b1262306db7f8f1da0e48a"
+      ],
+      "remediation": "upgrade cryptography to >= 41.0.6"
+    },
+    {
+      "osv_id": "PYSEC-2024-225",
+      "cve_ids": [
+        "CVE-2024-26130"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": 0.00831,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "42.0.4",
+        "97d231672763cdb5959a3b191e692a362f1b9e55"
+      ],
+      "remediation": "upgrade cryptography to >= 42.0.4"
+    },
+    {
+      "osv_id": "PYSEC-2024-60",
+      "cve_ids": [
+        "CVE-2024-3651"
+      ],
+      "package": "idna",
+      "installed_version": "3.4",
+      "cvss": 7.5,
+      "epss": 0.01386,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d",
+        "3.7"
+      ],
+      "remediation": "upgrade idna to >= 1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+    },
+    {
+      "osv_id": "GHSA-752w-5fwx-jx9f",
+      "cve_ids": [
+        "CVE-2026-32597"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 7.5,
+      "epss": 0.00198,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.12.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.12.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-120",
+      "cve_ids": [
+        "CVE-2026-32597"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 7.5,
+      "epss": 0.00198,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.12.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.12.0"
+    },
+    {
+      "osv_id": "GHSA-2m57-hf25-phgg",
+      "cve_ids": [
+        "CVE-2024-4340"
+      ],
+      "package": "sqlparse",
+      "installed_version": "0.3.1",
+      "cvss": 7.5,
+      "epss": 0.0321,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "0.5.0"
+      ],
+      "remediation": "upgrade sqlparse to >= 0.5.0"
+    },
+    {
+      "osv_id": "GHSA-2xpw-w6gg-jr37",
+      "cve_ids": [
+        "CVE-2025-66471"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 7.5,
+      "epss": 0.00622,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.6.0"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.6.0"
+    },
+    {
+      "osv_id": "GHSA-38jv-5279-wg99",
+      "cve_ids": [
+        "CVE-2026-21441"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 7.5,
+      "epss": 0.0068,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.6.3"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.6.3"
+    },
+    {
+      "osv_id": "GHSA-gm62-xv2j-4w53",
+      "cve_ids": [
+        "CVE-2025-66418"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 7.5,
+      "epss": 0.00622,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.6.0"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.6.0"
+    },
+    {
+      "osv_id": "GHSA-q34m-jh98-gwm2",
+      "cve_ids": [
+        "CVE-2024-49767"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 7.5,
+      "epss": 0.01093,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "0.20.0",
+        "3.0.6"
+      ],
+      "remediation": "upgrade werkzeug to >= 0.20.0"
+    },
+    {
+      "osv_id": "GHSA-xg9f-g7g7-2323",
+      "cve_ids": [
+        "CVE-2023-25577"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 7.5,
+      "epss": 0.0142,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.2.3"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.2.3"
+    },
+    {
+      "osv_id": "PYSEC-2023-221",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 7.5,
+      "epss": 0.01063,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.3.8",
+        "3.0.1",
+        "f2300208d5e2a5076cbbb4c2aad71096fd040ef9",
+        "f3c803b3ade485a45f12b6d6617595350c0f03e2"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.3.8"
+    },
+    {
+      "osv_id": "GHSA-537c-gmf6-5ccf",
+      "cve_ids": [],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 7.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.2,
+      "severity": "informational",
+      "fixed_versions": [
+        "48.0.1"
+      ],
+      "remediation": "upgrade cryptography to >= 48.0.1"
+    },
+    {
+      "osv_id": "GHSA-xgmm-8j9v-c9wx",
+      "cve_ids": [
+        "CVE-2026-48526"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 7.4,
+      "epss": 0.00198,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.2,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-179",
+      "cve_ids": [
+        "CVE-2026-48526"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 7.4,
+      "epss": 0.00198,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.2,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2025-183",
+      "cve_ids": [
+        "CVE-2025-45768"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 7.0,
+      "epss": 0.00153,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 2.1,
+      "severity": "informational",
+      "fixed_versions": [],
+      "remediation": null
+    },
+    {
+      "osv_id": "GHSA-jjg7-2v4v-x38h",
+      "cve_ids": [
+        "CVE-2024-3651"
+      ],
+      "package": "idna",
+      "installed_version": "3.4",
+      "cvss": 6.2,
+      "epss": 0.01386,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.9,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.7"
+      ],
+      "remediation": "upgrade idna to >= 3.7"
+    },
+    {
+      "osv_id": "GHSA-j8r2-6x86-q33q",
+      "cve_ids": [
+        "CVE-2023-32681"
+      ],
+      "package": "requests",
+      "installed_version": "2.28.2",
+      "cvss": 6.1,
+      "epss": 0.02782,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.9,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.31.0"
+      ],
+      "remediation": "upgrade requests to >= 2.31.0"
+    },
+    {
+      "osv_id": "GHSA-jfmj-5v4g-7637",
+      "cve_ids": [
+        "CVE-2024-5569"
+      ],
+      "package": "zipp",
+      "installed_version": "3.8.0",
+      "cvss": 6.2,
+      "epss": 0.00236,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.9,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.19.1"
+      ],
+      "remediation": "upgrade zipp to >= 3.19.1"
+    },
+    {
+      "osv_id": "GHSA-jfhm-5ghh-2f97",
+      "cve_ids": [
+        "CVE-2023-49083"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 5.9,
+      "epss": 0.00985,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "41.0.6"
+      ],
+      "remediation": "upgrade cryptography to >= 41.0.6"
+    },
+    {
+      "osv_id": "PYSEC-2026-56",
+      "cve_ids": [
+        "CVE-2026-27982"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 6.1,
+      "epss": 0.00159,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.14.1"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.14.1"
+    },
+    {
+      "osv_id": "PYSEC-2021-142",
+      "cve_ids": [
+        "CVE-2020-14343"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": null,
+      "epss": 0.05984,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 1.8,
+      "severity": "low",
+      "fixed_versions": [
+        "5.4"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.4"
+    },
+    {
+      "osv_id": "GHSA-v845-jxx5-vc9f",
+      "cve_ids": [
+        "CVE-2023-43804"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 5.9,
+      "epss": 0.01207,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "1.26.17",
+        "2.0.6"
+      ],
+      "remediation": "upgrade urllib3 to >= 1.26.17"
+    },
+    {
+      "osv_id": "GHSA-9v9h-cgj8-h64p",
+      "cve_ids": [
+        "CVE-2024-0727"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 5.5,
+      "epss": 0.03174,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "42.0.2"
+      ],
+      "remediation": "upgrade cryptography to >= 42.0.2"
+    },
+    {
+      "osv_id": "GHSA-h4gh-qq45-vh27",
+      "cve_ids": [],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 5.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "43.0.1"
+      ],
+      "remediation": "upgrade cryptography to >= 43.0.1"
+    },
+    {
+      "osv_id": "GHSA-65pc-fj4g-8rjx",
+      "cve_ids": [
+        "CVE-2026-45409"
+      ],
+      "package": "idna",
+      "installed_version": "3.4",
+      "cvss": 5.5,
+      "epss": 0.00408,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.15"
+      ],
+      "remediation": "upgrade idna to >= 3.15"
+    },
+    {
+      "osv_id": "GHSA-27jp-wm6q-gp25",
+      "cve_ids": [],
+      "package": "sqlparse",
+      "installed_version": "0.3.1",
+      "cvss": 5.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "0.5.4"
+      ],
+      "remediation": "upgrade sqlparse to >= 0.5.4"
+    },
+    {
+      "osv_id": "GHSA-rrm6-wvj7-cwh2",
+      "cve_ids": [
+        "CVE-2023-30608"
+      ],
+      "package": "sqlparse",
+      "installed_version": "0.3.1",
+      "cvss": 5.5,
+      "epss": 0.0098,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "0.4.4"
+      ],
+      "remediation": "upgrade sqlparse to >= 0.4.4"
+    },
+    {
+      "osv_id": "GHSA-29vq-49wr-vm6x",
+      "cve_ids": [
+        "CVE-2026-27199"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 5.5,
+      "epss": 0.00556,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.1.6"
+      ],
+      "remediation": "upgrade werkzeug to >= 3.1.6"
+    },
+    {
+      "osv_id": "GHSA-f9vj-2wh5-fj8j",
+      "cve_ids": [
+        "CVE-2024-49766"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 5.5,
+      "epss": 0.00786,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.0.6"
+      ],
+      "remediation": "upgrade werkzeug to >= 3.0.6"
+    },
+    {
+      "osv_id": "GHSA-hgf8-39gv-g3f2",
+      "cve_ids": [
+        "CVE-2025-66221"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 5.5,
+      "epss": 0.00466,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.1.4"
+      ],
+      "remediation": "upgrade werkzeug to >= 3.1.4"
+    },
+    {
+      "osv_id": "GHSA-hrfv-mqp8-q5rw",
+      "cve_ids": [
+        "CVE-2023-46136"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 5.7,
+      "epss": 0.01063,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.7,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.3.8",
+        "3.0.1"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.3.8"
+    },
+    {
+      "osv_id": "GHSA-m959-cc7f-wv43",
+      "cve_ids": [
+        "CVE-2026-34073"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 5.3,
+      "epss": 0.00154,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "46.0.6"
+      ],
+      "remediation": "upgrade cryptography to >= 46.0.6"
+    },
+    {
+      "osv_id": "PYSEC-2026-35",
+      "cve_ids": [
+        "CVE-2026-34073"
+      ],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 5.3,
+      "epss": 0.00154,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "46.0.6"
+      ],
+      "remediation": "upgrade cryptography to >= 46.0.6"
+    },
+    {
+      "osv_id": "GHSA-8m3c-c723-h4p4",
+      "cve_ids": [
+        "CVE-2025-65431"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 5.4,
+      "epss": 0.00141,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.13.0"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.13.0"
+    },
+    {
+      "osv_id": "GHSA-qhmc-3mvr-f2j4",
+      "cve_ids": [
+        "CVE-2025-65430"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 5.4,
+      "epss": 0.00138,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.13.0"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2025-110",
+      "cve_ids": [
+        "CVE-2025-65430"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 5.4,
+      "epss": 0.00138,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.13.0"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2025-111",
+      "cve_ids": [
+        "CVE-2025-65431"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 5.4,
+      "epss": 0.00141,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.13.0"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-215",
+      "cve_ids": [
+        "CVE-2026-45409"
+      ],
+      "package": "idna",
+      "installed_version": "3.4",
+      "cvss": 5.3,
+      "epss": 0.00408,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.15"
+      ],
+      "remediation": "upgrade idna to >= 3.15"
+    },
+    {
+      "osv_id": "PYSEC-2020-96",
+      "cve_ids": [
+        "CVE-2020-1747"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": null,
+      "epss": 0.05299,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 1.6,
+      "severity": "low",
+      "fixed_versions": [
+        "5.3.1"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.3.1"
+    },
+    {
+      "osv_id": "GHSA-pq67-6m6q-mj2v",
+      "cve_ids": [
+        "CVE-2025-50181"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 5.3,
+      "epss": 0.004,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.5.0"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.5.0"
+    },
+    {
+      "osv_id": "GHSA-qccp-gfcp-xxvc",
+      "cve_ids": [
+        "CVE-2026-44431"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 5.3,
+      "epss": 0.00483,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.7.0"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.7.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-141",
+      "cve_ids": [
+        "CVE-2026-44431"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 5.3,
+      "epss": 0.00483,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.7.0"
+      ],
+      "remediation": "upgrade urllib3 to >= 2.7.0"
+    },
+    {
+      "osv_id": "GHSA-87hc-h4r5-73f7",
+      "cve_ids": [
+        "CVE-2026-21860"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 5.3,
+      "epss": 0.00424,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.6,
+      "severity": "informational",
+      "fixed_versions": [
+        "3.1.5"
+      ],
+      "remediation": "upgrade werkzeug to >= 3.1.5"
+    },
+    {
+      "osv_id": "PYSEC-2020-176",
+      "cve_ids": [
+        "CVE-2019-20477"
+      ],
+      "package": "pyyaml",
+      "installed_version": "5.1",
+      "cvss": null,
+      "epss": 0.05031,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "yaml.load",
+      "path": [
+        "introduction.lab_code.test.<module>",
+        "ext:yaml.load"
+      ],
+      "score": 1.5,
+      "severity": "low",
+      "fixed_versions": [
+        "5.2b1"
+      ],
+      "remediation": "upgrade pyyaml to >= 5.2b1"
+    },
+    {
+      "osv_id": "GHSA-34jh-p97f-mpxf",
+      "cve_ids": [
+        "CVE-2024-37891"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 4.4,
+      "epss": 0.01141,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.4,
+      "severity": "informational",
+      "fixed_versions": [
+        "1.26.19",
+        "2.2.2"
+      ],
+      "remediation": "upgrade urllib3 to >= 1.26.19"
+    },
+    {
+      "osv_id": "GHSA-2jpr-83rg-v67j",
+      "cve_ids": [
+        "CVE-2026-27982"
+      ],
+      "package": "django-allauth",
+      "installed_version": "0.52.0",
+      "cvss": 4.3,
+      "epss": 0.00159,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "65.14.1"
+      ],
+      "remediation": "upgrade django-allauth to >= 65.14.1"
+    },
+    {
+      "osv_id": "GHSA-993g-76c3-p5m4",
+      "cve_ids": [
+        "CVE-2026-48522"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 4.2,
+      "epss": 0.00181,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-175",
+      "cve_ids": [
+        "CVE-2026-48522"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 4.2,
+      "epss": 0.00181,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "GHSA-g4mx-q9vg-27p4",
+      "cve_ids": [
+        "CVE-2023-45803"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 4.2,
+      "epss": 0.00544,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "1.26.18",
+        "2.0.7"
+      ],
+      "remediation": "upgrade urllib3 to >= 1.26.18"
+    },
+    {
+      "osv_id": "PYSEC-2023-212",
+      "cve_ids": [
+        "CVE-2023-45803"
+      ],
+      "package": "urllib3",
+      "installed_version": "1.26.9",
+      "cvss": 4.2,
+      "epss": 0.00544,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.3,
+      "severity": "informational",
+      "fixed_versions": [
+        "1.26.18",
+        "2.0.7",
+        "4e98d57809dacab1cbe625fddeec1a290c478ea9"
+      ],
+      "remediation": "upgrade urllib3 to >= 1.26.18"
+    },
+    {
+      "osv_id": "GHSA-fhv5-28vv-h8m8",
+      "cve_ids": [
+        "CVE-2026-48524"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 3.7,
+      "epss": 0.00222,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.1,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "PYSEC-2026-177",
+      "cve_ids": [
+        "CVE-2026-48524"
+      ],
+      "package": "pyjwt",
+      "installed_version": "2.4.0",
+      "cvss": 3.7,
+      "epss": 0.00222,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 1.1,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.13.0"
+      ],
+      "remediation": "upgrade pyjwt to >= 2.13.0"
+    },
+    {
+      "osv_id": "GHSA-248v-346w-9cwc",
+      "cve_ids": [
+        "CVE-2024-39689"
+      ],
+      "package": "certifi",
+      "installed_version": "2022.12.7",
+      "cvss": 2.5,
+      "epss": 0.01049,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "2024.7.4"
+      ],
+      "remediation": "upgrade certifi to >= 2024.7.4"
+    },
+    {
+      "osv_id": "GHSA-5cpq-8wj7-hf2v",
+      "cve_ids": [],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 2.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "41.0.0"
+      ],
+      "remediation": "upgrade cryptography to >= 41.0.0"
+    },
+    {
+      "osv_id": "GHSA-jm77-qphf-c4w8",
+      "cve_ids": [],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 2.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "41.0.3"
+      ],
+      "remediation": "upgrade cryptography to >= 41.0.3"
+    },
+    {
+      "osv_id": "GHSA-v8gr-m533-ghj9",
+      "cve_ids": [],
+      "package": "cryptography",
+      "installed_version": "39.0.1",
+      "cvss": 2.5,
+      "epss": null,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "41.0.4"
+      ],
+      "remediation": "upgrade cryptography to >= 41.0.4"
+    },
+    {
+      "osv_id": "PYSEC-2023-100",
+      "cve_ids": [
+        "CVE-2023-36053"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.02669,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.8,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.20",
+        "4.1.10",
+        "4.2.3"
+      ],
+      "remediation": "upgrade django to >= 3.2.20"
+    },
+    {
+      "osv_id": "GHSA-px8h-6qxv-m22q",
+      "cve_ids": [
+        "CVE-2023-23934"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": 2.6,
+      "epss": 0.00507,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.8,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.2.3"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.2.3"
+    },
+    {
+      "osv_id": "PYSEC-2024-47",
+      "cve_ids": [
+        "CVE-2024-27351"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01854,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.6,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.25",
+        "4.2.11",
+        "5.0.3"
+      ],
+      "remediation": "upgrade django to >= 3.2.25"
+    },
+    {
+      "osv_id": "PYSEC-2025-1",
+      "cve_ids": [
+        "CVE-2024-56374"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01854,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.6,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.18",
+        "5.0.11",
+        "5.1.5"
+      ],
+      "remediation": "upgrade django to >= 4.2.18"
+    },
+    {
+      "osv_id": "PYSEC-2024-28",
+      "cve_ids": [
+        "CVE-2024-24680"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01606,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.5,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.24",
+        "4.2.10",
+        "5.0.2"
+      ],
+      "remediation": "upgrade django to >= 3.2.24"
+    },
+    {
+      "osv_id": "PYSEC-2023-225",
+      "cve_ids": [
+        "CVE-2023-41164"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01284,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.21",
+        "4.1.11",
+        "4.2.5"
+      ],
+      "remediation": "upgrade django to >= 3.2.21"
+    },
+    {
+      "osv_id": "PYSEC-2023-226",
+      "cve_ids": [
+        "CVE-2023-43665"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01236,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.22",
+        "4.1.12",
+        "4.2.6"
+      ],
+      "remediation": "upgrade django to >= 3.2.22"
+    },
+    {
+      "osv_id": "PYSEC-2023-61",
+      "cve_ids": [
+        "CVE-2023-31047"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.0138,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "3.2.19",
+        "4.1.9",
+        "4.2.1"
+      ],
+      "remediation": "upgrade django to >= 3.2.19"
+    },
+    {
+      "osv_id": "PYSEC-2024-156",
+      "cve_ids": [
+        "CVE-2024-53907"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.0137,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.17",
+        "5.0.10",
+        "5.1.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.17"
+    },
+    {
+      "osv_id": "PYSEC-2024-157",
+      "cve_ids": [
+        "CVE-2024-53908"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01396,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.17",
+        "5.0.10",
+        "5.1.4"
+      ],
+      "remediation": "upgrade django to >= 4.2.17"
+    },
+    {
+      "osv_id": "PYSEC-2024-56",
+      "cve_ids": [
+        "CVE-2024-38875"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01187,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "PYSEC-2024-67",
+      "cve_ids": [
+        "CVE-2024-41989"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.012,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "PYSEC-2024-68",
+      "cve_ids": [
+        "CVE-2024-41990"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01258,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "PYSEC-2024-70",
+      "cve_ids": [
+        "CVE-2024-42005"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01227,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.4,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "PYSEC-2024-57",
+      "cve_ids": [
+        "CVE-2024-39329"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.00889,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "PYSEC-2024-58",
+      "cve_ids": [
+        "CVE-2024-39330"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.01008,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.14",
+        "5.0.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.14"
+    },
+    {
+      "osv_id": "PYSEC-2024-69",
+      "cve_ids": [
+        "CVE-2024-41991"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.00954,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.3,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.15",
+        "5.0.8"
+      ],
+      "remediation": "upgrade django to >= 4.2.15"
+    },
+    {
+      "osv_id": "PYSEC-2023-227",
+      "cve_ids": [
+        "CVE-2023-44271"
+      ],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": null,
+      "epss": 0.01038,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 0.3,
+      "severity": "low",
+      "fixed_versions": [
+        "10.0.0",
+        "1fe1bb49c452b0318cad12ea9d97c3bef188e9a7"
+      ],
+      "remediation": "upgrade pillow to >= 10.0.0"
+    },
+    {
+      "osv_id": "PYSEC-2025-13",
+      "cve_ids": [
+        "CVE-2025-26699"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.00748,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.20",
+        "5.0.13",
+        "5.1.7"
+      ],
+      "remediation": "upgrade django to >= 4.2.20"
+    },
+    {
+      "osv_id": "PYSEC-2025-47",
+      "cve_ids": [
+        "CVE-2025-48432"
+      ],
+      "package": "django",
+      "installed_version": "4.2",
+      "cvss": null,
+      "epss": 0.006,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "django.shortcuts.redirect",
+      "path": [
+        "introduction.views.a1_broken_access",
+        "ext:django.shortcuts.redirect"
+      ],
+      "score": 0.2,
+      "severity": "low",
+      "fixed_versions": [
+        "4.2.22",
+        "5.1.10",
+        "5.2.2"
+      ],
+      "remediation": "upgrade django to >= 4.2.22"
+    },
+    {
+      "osv_id": "PYSEC-2023-74",
+      "cve_ids": [
+        "CVE-2023-32681"
+      ],
+      "package": "requests",
+      "installed_version": "2.28.2",
+      "cvss": null,
+      "epss": 0.02782,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.1,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.31.0",
+        "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+      ],
+      "remediation": "upgrade requests to >= 2.31.0"
+    },
+    {
+      "osv_id": "PYSEC-2023-135",
+      "cve_ids": [
+        "CVE-2023-37920"
+      ],
+      "package": "certifi",
+      "installed_version": "2022.12.7",
+      "cvss": null,
+      "epss": 0.00472,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.0,
+      "severity": "informational",
+      "fixed_versions": [
+        "2023.7.22"
+      ],
+      "remediation": "upgrade certifi to >= 2023.7.22"
+    },
+    {
+      "osv_id": "PYSEC-2023-175",
+      "cve_ids": [],
+      "package": "pillow",
+      "installed_version": "9.4.0",
+      "cvss": null,
+      "epss": null,
+      "in_kev": false,
+      "reachable": true,
+      "matched_symbol": "PIL.Image.open",
+      "path": [
+        "introduction.views.a9_lab2",
+        "ext:PIL.Image.open"
+      ],
+      "score": 0.0,
+      "severity": "low",
+      "fixed_versions": [
+        "10.0.1"
+      ],
+      "remediation": "upgrade pillow to >= 10.0.1"
+    },
+    {
+      "osv_id": "PYSEC-2023-87",
+      "cve_ids": [
+        "CVE-2023-30608"
+      ],
+      "package": "sqlparse",
+      "installed_version": "0.3.1",
+      "cvss": null,
+      "epss": 0.0098,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.0,
+      "severity": "informational",
+      "fixed_versions": [
+        "0.4.4",
+        "c457abd5f097dd13fb21543381e7cfafe7d31cfb",
+        "e75e35869473832a1eb67772b1adfee2db11b85a"
+      ],
+      "remediation": "upgrade sqlparse to >= 0.4.4"
+    },
+    {
+      "osv_id": "PYSEC-2023-57",
+      "cve_ids": [
+        "CVE-2023-23934"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": null,
+      "epss": 0.00507,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.0,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.2.3",
+        "cf275f42acad1b5950c50ffe8ef58fe62cdce028"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.2.3"
+    },
+    {
+      "osv_id": "PYSEC-2023-58",
+      "cve_ids": [
+        "CVE-2023-25577"
+      ],
+      "package": "werkzeug",
+      "installed_version": "2.1.2",
+      "cvss": null,
+      "epss": 0.0142,
+      "in_kev": false,
+      "reachable": false,
+      "matched_symbol": null,
+      "path": [],
+      "score": 0.0,
+      "severity": "informational",
+      "fixed_versions": [
+        "2.2.3",
+        "517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"
+      ],
+      "remediation": "upgrade werkzeug to >= 2.2.3"
+    }
+  ]
+}

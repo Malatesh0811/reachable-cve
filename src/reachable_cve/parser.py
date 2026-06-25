@@ -67,6 +67,19 @@ class GetattrAlias:
 
 
 @dataclass
+class LocalVarAssign:
+    """A function-scope assignment of the form `name = <Callable>(...)`.
+
+    Used to resolve later `name.method(...)` calls back to `<Callable>.method`.
+    Only single-Name callable RHS is tracked (no nested attribute access).
+    Example: `t = Template(x)` records ("module.fn", "t", "Template").
+    """
+    scope_qualname: str
+    local_name: str
+    callee_name: str
+
+
+@dataclass
 class ParsedModule:
     path: Path
     module: str
@@ -75,6 +88,7 @@ class ParsedModule:
     calls: list[CallSite] = field(default_factory=list)
     class_attr_assigns: list[ClassAttrAssign] = field(default_factory=list)
     getattr_aliases: list[GetattrAlias] = field(default_factory=list)
+    local_var_assigns: list[LocalVarAssign] = field(default_factory=list)
 
 
 _parser = get_parser("python")
@@ -156,6 +170,31 @@ def _maybe_record_self_assign(node, src: bytes, pm: ParsedModule, enclosing: str
     class_qual = ".".join([pm.module] + class_stack)
     pm.class_attr_assigns.append(
         ClassAttrAssign(class_qualname=class_qual, attr=_text(attr, src), rhs_expr=_text(right, src))
+    )
+
+
+def _maybe_record_local_var_assign(node, src: bytes, pm: ParsedModule, enclosing: str):
+    """If `node` is `<name> = <Identifier>(...)`, record the var→class binding.
+
+    Only single-Name callables are tracked. `t = mod.Class()` (attribute-access
+    RHS) is intentionally skipped — supporting it requires another resolution
+    step and is not what the failing test needs.
+    """
+    if node.type != "assignment":
+        return
+    left = node.child_by_field_name("left")
+    right = node.child_by_field_name("right")
+    if left is None or right is None or left.type != "identifier" or right.type != "call":
+        return
+    func = right.child_by_field_name("function")
+    if func is None or func.type != "identifier":
+        return
+    pm.local_var_assigns.append(
+        LocalVarAssign(
+            scope_qualname=enclosing,
+            local_name=_text(left, src),
+            callee_name=_text(func, src),
+        )
     )
 
 
@@ -249,6 +288,7 @@ def _walk(node, src: bytes, pm: ParsedModule, enclosing: str, class_stack: list[
     if t == "assignment":
         _maybe_record_self_assign(node, src, pm, enclosing, class_stack)
         _maybe_record_getattr_alias(node, src, pm, enclosing)
+        _maybe_record_local_var_assign(node, src, pm, enclosing)
         # fall through to allow recursion into the RHS
 
     if t == "call":
