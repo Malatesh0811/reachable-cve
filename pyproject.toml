@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "reachable-cve"
-version = "0.2.0"
+version = "0.3.0"
 description = "Reachability-aware vulnerability scanner. Combines static call-graph reachability with EPSS and CISA KEV to cut Snyk/Dependabot noise by ~80%."
 readme = "README.md"
 license = { text = "MIT" }
